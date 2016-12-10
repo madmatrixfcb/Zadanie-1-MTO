@@ -1,5 +1,7 @@
 package calcapptest;
 
+import static org.junit.Assert.*;
+
 import org.junit.Test;
 
 import calcapp.Calc;
@@ -13,5 +15,6 @@ public class CalcTest {
 		Calc calc = new Calc();
 		assertEquals(8, calc.sum(a,b));
 	}
+
 
 }
