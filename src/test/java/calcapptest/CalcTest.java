@@ -38,7 +38,8 @@ public class CalcTest {
 		assertEquals(IllegalArgumentException.class, calc.division(a, b));
 	}
 	
-	@Test void divisionHardTest() {
+	@Test
+	public void divisionHardTest() {
 		int a = 5;
 		int b = 2;
 		assertEquals(2, calc.division(a, b));
