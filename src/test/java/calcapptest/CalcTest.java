@@ -2,6 +2,8 @@ package calcapptest;
 
 import static org.junit.Assert.*;
 
+import java.util.Random;
+
 import org.junit.Before;
 import org.junit.Test;
 
@@ -43,5 +45,17 @@ public class CalcTest {
 		int a = 5;
 		int b = 2;
 		assertEquals(2, calc.division(a, b));
+	}
+	
+	@Test
+	public void randomNumberTest() {
+		//Random rand = new RandomStub([1,2,3,4,5,6]);
+		
+	}
+	
+	@Test(expected = ArithmeticException.class)
+	public void sqrtValueMinusTest() {
+		int a = 9;
+		assertEquals(ArithmeticException.class, calc.sqrtValue(a));
 	}
 }
