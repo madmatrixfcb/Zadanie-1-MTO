@@ -16,6 +16,12 @@ public class Calc {
 		return divide;
 	}
 
-
+	public int sqrtValue(int a) {
+		if (a < 0) {
+			throw new ArithmeticException("Wartosc nie moze byc ujemna");
+		}
+		int sqrtVal = (int) Math.sqrt(a);	
+		return sqrtVal;
+	}
 
 }

@@ -55,7 +55,7 @@ public class CalcTest {
 	
 	@Test(expected = ArithmeticException.class)
 	public void sqrtValueMinusTest() {
-		int a = 9;
+		int a = -9;
 		assertEquals(ArithmeticException.class, calc.sqrtValue(a));
 	}
 }
