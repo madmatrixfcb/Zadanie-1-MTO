@@ -6,6 +6,7 @@ import java.util.Random;
 
 import org.junit.Before;
 import org.junit.Test;
+import org.mockito.Mockito;
 
 import calcapp.Calc;
 
@@ -47,10 +48,12 @@ public class CalcTest {
 		assertEquals(2, calc.division(a, b));
 	}
 
+	// randomNumberTest
 	@Test
 	public void randomNumberTest() {
-		// Random rand = new RandomStub([1,2,3,4,5,6]);
-
+		Calc calc = Mockito.mock(Calc.class);
+		when(calc.randomNumber()).thenReturn(5);
+		assertEquals(calc.randomNumber(), 5);
 	}
 
 	@Test(expected = ArithmeticException.class)
@@ -64,10 +67,10 @@ public class CalcTest {
 		int a = 5;
 		assertEquals(2, calc.sqrtValue(a));
 	}
-	
+
 	@Test
 	public void sqrtValueSimpleTest() {
 		int a = 9;
-		assertEquals(3,  calc.sqrtValue(a));
+		assertEquals(3, calc.sqrtValue(a));
 	}
 }
