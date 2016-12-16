@@ -39,23 +39,35 @@ public class CalcTest {
 		int b = 0;
 		assertEquals(IllegalArgumentException.class, calc.division(a, b));
 	}
-	
+
 	@Test
 	public void divisionHardTest() {
 		int a = 5;
 		int b = 2;
 		assertEquals(2, calc.division(a, b));
 	}
-	
+
 	@Test
 	public void randomNumberTest() {
-		//Random rand = new RandomStub([1,2,3,4,5,6]);
-		
+		// Random rand = new RandomStub([1,2,3,4,5,6]);
+
 	}
-	
+
 	@Test(expected = ArithmeticException.class)
 	public void sqrtValueMinusTest() {
 		int a = -9;
 		assertEquals(ArithmeticException.class, calc.sqrtValue(a));
+	}
+
+	@Test
+	public void sqrtValueHardTest() {
+		int a = 5;
+		assertEquals(2, calc.sqrtValue(a));
+	}
+	
+	@Test
+	public void sqrtValueSimpleTest() {
+		int a = 9;
+		assertEquals(3,  calc.sqrtValue(a));
 	}
 }
