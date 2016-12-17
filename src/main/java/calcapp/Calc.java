@@ -1,5 +1,7 @@
 package calcapp;
 
+import java.util.Random;
+
 public class Calc {
 
 	public int sum(int a, int b) {
@@ -22,6 +24,13 @@ public class Calc {
 		}
 		int sqrtVal = (int) Math.sqrt(a);	
 		return sqrtVal;
+	}
+	
+	public int randomNumber() {
+		Random rand = new Random();
+		int a = rand.nextInt(10);
+		return a;
+		
 	}
 
 }

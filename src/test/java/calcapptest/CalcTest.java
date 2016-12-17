@@ -1,22 +1,22 @@
 package calcapptest;
 
-import static org.junit.Assert.*;
-
-import java.util.Random;
+import static org.junit.Assert.assertEquals;
 
 import org.junit.Before;
 import org.junit.Test;
-import org.mockito.Mockito;
 
 import calcapp.Calc;
 
 public class CalcTest {
-
+	
 	Calc calc;
 
+	
 	@Before
 	public void before() {
 		calc = new Calc();
+		
+
 	}
 
 	@Test
@@ -48,12 +48,14 @@ public class CalcTest {
 		assertEquals(2, calc.division(a, b));
 	}
 
-	// randomNumberTest
+	
+
 	@Test
 	public void randomNumberTest() {
-		Calc calc = Mockito.mock(Calc.class);
-		when(calc.randomNumber()).thenReturn(5);
-		assertEquals(calc.randomNumber(), 5);
+		int expectedValue = 5;
+		calc = new StubCalc(expectedValue);
+		assertEquals(expectedValue, calc.randomNumber());
+	
 	}
 
 	@Test(expected = ArithmeticException.class)
